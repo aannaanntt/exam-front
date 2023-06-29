@@ -1,0 +1,47 @@
+<div class="bootstrap-wrapper" style="margin-top: 20px;">
+
+    <div class="container">
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-md-6 offset-md-3">
+            <mat-card>
+                  <div  class="container text-center">
+                <img src="../../../assets/logo.jpg" alt="logo"  width="250" 
+     height="250"/>
+            </div>
+         
+
+             <h1 class="text-center">Login here!!</h1>
+
+              <form [formGroup]="loginForm">
+
+
+              <!---userName-->
+              <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Username</mat-label>
+
+                <!--[(ngModel)]="user" add this below to add 2 way binding-->
+                <input type="text"   formControlName="userName"    matInput placeholder="UserName"/>
+          
+
+            <mat-hint>Valid userName!!</mat-hint>
+
+              </mat-form-field>
+
+                <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Password</mat-label>
+                <input type="password" formControlName="password"  matInput placeholder="Password">
+              </mat-form-field>
+
+                    <div class="container text-center">
+                      <button mat-raised-button color="primary" (click)="onSubmit()">Register</button>
+                      <button style="margin-left: 20px;" mat-raised-button color="accent">Reset</button>
+
+                     </div>
+
+
+          </form>
+         </mat-card>
+        </div>
+    </div>
+</div>
+</div>
